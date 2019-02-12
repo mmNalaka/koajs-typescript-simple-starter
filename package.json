@@ -22,13 +22,16 @@
     "koa-bodyparser": "^4.2.1",
     "koa-helmet": "^4.0.0",
     "koa-logger": "^3.2.0",
+    "koa-response-time": "^2.1.0",
     "koa-router": "^7.4.0",
     "koa-x-request-id": "^2.0.0"
   },
   "devDependencies": {
     "@types/http-status-codes": "^1.2.0",
+    "@types/kcors": "^2.2.3",
     "@types/koa": "^2.0.48",
     "@types/koa-bodyparser": "^4.2.1",
+    "@types/koa-helmet": "^3.1.2",
     "@types/koa-logger": "^3.1.1",
     "@types/koa-response-time": "^2.0.1",
     "@types/koa-router": "^7.0.39",
