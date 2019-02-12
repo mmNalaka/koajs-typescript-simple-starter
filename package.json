@@ -1,0 +1,36 @@
+{
+  "name": "koajs-typescript-simple-starter",
+  "version": "1.0.0",
+  "description": "A simple stater template for KoaJs projects with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint --project tsconfig.json --format stylish",
+    "build": "tsc",
+    "serve-dev": "ts-node src/index.ts",
+    "dev": "nodemon",
+    "clean": "rimraf dist",
+    "restart": "rimraf dist && yarn build && yarn start",
+    "start": "node dist/index.js"
+  },
+  "author": "Nalaka Manathunga",
+  "license": "ISC",
+  "dependencies": {
+    "http-status-codes": "^1.3.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/http-status-codes": "^1.2.0",
+    "@types/koa": "^2.0.48",
+    "@types/koa-bodyparser": "^4.2.1",
+    "@types/koa-router": "^7.0.39",
+    "@types/node": "^11.9.0",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3"
+  }
+}
