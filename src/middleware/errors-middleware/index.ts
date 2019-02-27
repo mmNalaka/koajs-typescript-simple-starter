@@ -10,15 +10,16 @@ export default () => async (ctx: Koa.Context, next: any) => {
       httpStatusCodes.NOT_FOUND
     );
   } catch (err) {
-    const status =
+    const status: number =
       err.status ||
       err.statusCode ||
       err.status_code ||
       (err.output && err.output.statusCode) ||
       (err.oauthError && err.oauthError.statusCode) ||
       httpStatusCodes.INTERNAL_SERVER_ERROR
-    ctx.type = 'application/json';
+
+    ctx.type = 'application/json'
     ctx.status = status
     ctx.body = `Uh-oh: ${err.message}`
   }
-};
+}
