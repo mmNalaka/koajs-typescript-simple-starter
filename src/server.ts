@@ -22,17 +22,6 @@ app.use(helmet())
 app.use(cors(config.corsConfig))
 app.use(bodyParser(config.bodyParserConfig))
 
-app.use(async (ctx) => {
-  if (ctx.query.greet !== 'world') {
-    throw new Error('can only greet "world"')
-  }
-
-  console.log('Sending response')
-  ctx.status = 200
-  ctx.body = `Hello ${ctx.query.greet} from Koa`
-})
-
-
 app.use(async (ctx: Koa.Context, next) => {
   try {
     ctx.status = httpStatusCodes.OK
